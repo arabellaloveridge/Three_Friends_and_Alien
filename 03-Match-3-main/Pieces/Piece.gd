@@ -8,6 +8,7 @@ var target_position = Vector2(0,0)
 var default_modulate = Color(1,1,1,1)
 var highlight = Color(1,0.8,0,1)
 
+
 var dying = false
 
 func _ready():
