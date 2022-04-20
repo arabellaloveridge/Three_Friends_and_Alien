@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Screens/End_Game.gd" type="Script" id=1]
+
+[node name="End_Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 10.0
+margin_top = 280.0
+margin_right = 566.0
+margin_bottom = 752.0
+color = Color( 0, 0, 0, 0.752941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 96.0
+margin_top = 340.0
+margin_right = 226.0
+margin_bottom = 388.0
+rect_scale = Vector2( 3, 3 )
+text = "The timer hit 0!
+
+Your final score was:"
+align = 1
+valign = 1
+
+[node name="Play_Again" type="Button" parent="."]
+margin_left = 188.0
+margin_top = 541.0
+margin_right = 388.0
+margin_bottom = 591.0
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 188.0
+margin_top = 608.0
+margin_right = 388.0
+margin_bottom = 658.0
+text = "Quit"
+
+[connection signal="pressed" from="Play_Again" to="." method="_on_Play_Again_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

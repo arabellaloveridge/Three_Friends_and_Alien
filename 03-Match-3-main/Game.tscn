@@ -1,18 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/HUD.gd" type="Script" id=3]
+[ext_resource path="res://UI/Camera.gd" type="Script" id=4]
+[ext_resource path="res://UI/Instructions.gd" type="Script" id=5]
 
 [node name="Game" type="Node2D"]
 
 [node name="grid" type="Node2D" parent="."]
 script = ExtResource( 1 )
-width = 4
-height = 5
-xStart = 96
-yStart = 832
-offset = 128
+width = 5
+height = 8
+xStart = 85
+yStart = 900
+offset = 100
 background = ExtResource( 2 )
 
 [node name="HUD" type="Control" parent="."]
@@ -27,5 +29,63 @@ __meta__ = {
 margin_right = 576.0
 margin_bottom = 20.0
 text = "Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="HUD"]
+margin_right = 565.0
+margin_bottom = 20.0
+text = "Time: "
+align = 2
+
+[node name="Timer" type="Timer" parent="HUD"]
+autostart = true
+
+[node name="Instructions" type="Control" parent="HUD"]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Instructions"]
+margin_right = 576.0
+margin_bottom = 1024.0
+color = Color( 0, 0, 0, 0.752941 )
+
+[node name="Label" type="Label" parent="HUD/Instructions"]
+margin_right = 576.0
+margin_bottom = 952.0
+text = "TASK
+
+Don't let timer hit 0"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="CD_Label" type="Label" parent="HUD/Instructions"]
+margin_right = 576.0
+margin_bottom = 1054.0
+text = "Starting in"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Countdown" type="Timer" parent="HUD/Instructions"]
+autostart = true
 
 [node name="Effects" type="Node2D" parent="."]
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+script = ExtResource( 4 )
+
+[connection signal="timeout" from="HUD/Timer" to="HUD" method="_on_Timer_timeout"]
+[connection signal="timeout" from="HUD/Instructions/Countdown" to="HUD/Instructions" method="_on_Countdown_timeout"]

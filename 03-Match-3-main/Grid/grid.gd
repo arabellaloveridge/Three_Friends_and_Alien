@@ -126,6 +126,13 @@ func _process(_delta):
 	touch_input()
 	find_matches()
 	refill_columns()
+	touch_up()
+	
+func touch_up():
+	for i in width:
+		for j in height:
+			if all_pieces[i][j] != null:
+				all_pieces[i][j].move_piece_to(Vector2(xStart + i * offset, yStart - j * offset))
 	
 
 func find_matches():
@@ -200,6 +207,9 @@ func destroy_matched():
 	for i in width:
 		for j in height:
 			if(all_pieces[i][j].is_matched):
+				remove_child(all_pieces[i][j])
+				get_node("/root/Game/Effects")
+				add_child(all_pieces[i][j])
 				all_pieces[i][j].die()
 				all_pieces[i][j] = null
 	collapse_columns()
