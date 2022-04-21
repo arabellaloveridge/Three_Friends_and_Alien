@@ -28,7 +28,8 @@ Assets, or resources used:
 
 ## References
 
-Alagard Font by Hewett Tsoi https://www.dafont.com/alagard.font /n
+Alagard Font by Hewett Tsoi https://www.dafont.com/alagard.font
+
 Cobblestone from Adobe Stock (I own it :D)
 ## Future Development
 
