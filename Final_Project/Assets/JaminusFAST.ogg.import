@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/JaminusFAST.ogg-66106ce656f8486f4fb98af5cc2d5280.oggstr"
+
+[deps]
+
+source_file="res://Assets/JaminusFAST.ogg"
+dest_files=[ "res://.import/JaminusFAST.ogg-66106ce656f8486f4fb98af5cc2d5280.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
