@@ -13,10 +13,15 @@ Struggles or surprises you encountered during the development of the game
 
 ## Implementation
 Screen Shake
+
 Falling and spinning tiles when matching 
+
 Sound effects
+
 Music 
+
 Score system
+
 Countdown
 
 Assets, or resources used
