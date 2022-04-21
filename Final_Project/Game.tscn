@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/JaminusFAST.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Audio/Music_Controller.gd" type="Script" id=9]
 [ext_resource path="res://Assets/Fire sound.wav" type="AudioStream" id=10]
+[ext_resource path="res://background_game.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
@@ -21,6 +22,10 @@ font_data = ExtResource( 6 )
 font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
+
+[node name="BackgroundGame" type="Sprite" parent="."]
+position = Vector2( 302, 513 )
+texture = ExtResource( 11 )
 
 [node name="grid" type="Node2D" parent="."]
 script = ExtResource( 1 )
@@ -45,11 +50,9 @@ margin_top = 1.0
 margin_right = 580.0
 margin_bottom = 21.0
 rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Score: "
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Time" type="Label" parent="HUD"]
 margin_left = -292.0
@@ -57,6 +60,7 @@ margin_top = 2.0
 margin_right = 273.0
 margin_bottom = 22.0
 rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Time: "
 align = 2
