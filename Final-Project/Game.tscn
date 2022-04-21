@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
@@ -6,11 +6,18 @@
 [ext_resource path="res://UI/Camera.gd" type="Script" id=4]
 [ext_resource path="res://UI/Instructions.gd" type="Script" id=5]
 [ext_resource path="res://alagard.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Jaminus.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/JaminusFAST.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Audio/Music_Controller.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Fire sound.wav" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
@@ -78,6 +85,7 @@ color = Color( 0, 0, 0, 0.752941 )
 [node name="Label" type="Label" parent="HUD/Instructions"]
 margin_right = 576.0
 margin_bottom = 952.0
+custom_fonts/font = SubResource( 3 )
 text = "TASK
 
 Don't let timer hit 0"
@@ -88,6 +96,7 @@ autowrap = true
 [node name="CD_Label" type="Label" parent="HUD/Instructions"]
 margin_right = 576.0
 margin_bottom = 1054.0
+custom_fonts/font = SubResource( 3 )
 text = "Starting in"
 align = 1
 valign = 1
@@ -104,6 +113,18 @@ autostart = true
 anchor_mode = 0
 current = true
 script = ExtResource( 4 )
+
+[node name="Music_Normal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Music_Fast" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="Music_Controller" type="Node2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="Fire_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 
 [connection signal="timeout" from="HUD/Timer" to="HUD" method="_on_Timer_timeout"]
 [connection signal="timeout" from="HUD/Instructions/Countdown" to="HUD/Instructions" method="_on_Countdown_timeout"]

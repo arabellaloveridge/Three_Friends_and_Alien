@@ -14,10 +14,18 @@ var move_speed = 1.0
 var dying = false
 var dying_progress = 0
 
+onready var fire = get_node("/root/Game/Fire_Sound")
+
 func _ready():
 	randomize()
+	$Sprite.material = $Sprite.material.duplicate()
 
 func _physics_process(_delta):
+	if dying and not $Tween.is_active() and dying_progress >= 1:
+		queue_free()
+	if dying: 
+		dying_progress += 0.01
+		$Sprite.material.set_shader_param("progress", dying_progress)
 	if dying and not $Tween.is_active():
 		queue_free()
 	if not dying and target_position != Vector2.ZERO and not $Moving.is_active() and target_position != position:
@@ -47,6 +55,7 @@ func die():
 	target_color.a = 0.25
 	var fall_duration = randf()*fall_speed + 1
 	var rotate_amount = (randi()%1440) - 720
+	fire.play()
 	
 	var target_pos = position
 	target_pos.y = 1100

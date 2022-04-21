@@ -22,6 +22,7 @@ var scores = {
 func _unhandled_input(event):
 	if event.is_action_pressed("quit"):
 		get_tree().quit()
+		
 
 func change_score(s):
 	var camera = get_node_or_null("/root/Game/Camera")
@@ -41,3 +42,4 @@ func change_time():
 func add_time():
 	time += 2
 	emit_signal("time_changed")
+
