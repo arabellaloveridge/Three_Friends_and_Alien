@@ -24,7 +24,7 @@ Score system
 
 Countdown
 
-Assets, or resources used
+Assets, or resources used:
 
 ## References
 
