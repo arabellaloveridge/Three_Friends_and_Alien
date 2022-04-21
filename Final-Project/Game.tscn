@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/HUD.gd" type="Script" id=3]
 [ext_resource path="res://UI/Camera.gd" type="Script" id=4]
 [ext_resource path="res://UI/Instructions.gd" type="Script" id=5]
+[ext_resource path="res://alagard.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
 
@@ -26,18 +33,29 @@ __meta__ = {
 }
 
 [node name="Score" type="Label" parent="HUD"]
-margin_right = 576.0
-margin_bottom = 20.0
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 580.0
+margin_bottom = 21.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 1 )
 text = "Score: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Time" type="Label" parent="HUD"]
-margin_right = 565.0
-margin_bottom = 20.0
+margin_left = -292.0
+margin_top = 2.0
+margin_right = 273.0
+margin_bottom = 22.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 2 )
 text = "Time: "
 align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Timer" type="Timer" parent="HUD"]
 autostart = true
