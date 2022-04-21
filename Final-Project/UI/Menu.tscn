@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://UI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://alagard.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Assets/istockphoto-1336070094-612x612.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/background_game.png" type="Texture" id=3]
 [ext_resource path="res://Assets/360_F_491390312_dkaanHIq5iugaM2aasqfE60ouy6NfCCf.jpg" type="Texture" id=4]
 [ext_resource path="res://Assets/istockphoto-491840975-612x612.jpg" type="Texture" id=5]
+[ext_resource path="res://Assets/normal_cobble.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -21,8 +22,8 @@ texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 612, 612 )
 
 [sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 612, 612 )
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 165, 166 )
 
 [sub_resource type="Theme" id=5]
 
@@ -38,8 +39,8 @@ texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 612, 612 )
 
 [sub_resource type="StyleBoxTexture" id=6]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 612, 612 )
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 165, 166 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -59,22 +60,35 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 299, 510.5 )
+scale = Vector2( 0.970703, 1.0127 )
+texture = ExtResource( 3 )
+
 [node name="Label" type="Label" parent="."]
 margin_left = -292.0
 margin_top = -275.0
 margin_right = 284.0
 margin_bottom = 237.0
 rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "TIME DRAGS ON"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Play" type="Button" parent="."]
 margin_left = 234.0
 margin_top = 304.0
 margin_right = 334.0
 margin_bottom = 344.0
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
@@ -90,6 +104,10 @@ margin_top = 364.0
 margin_right = 334.0
 margin_bottom = 404.0
 theme = SubResource( 5 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
 custom_styles/hover = SubResource( 9 )
 custom_styles/pressed = SubResource( 10 )

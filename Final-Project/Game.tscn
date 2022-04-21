@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://UI/Camera.gd" type="Script" id=4]
 [ext_resource path="res://UI/Instructions.gd" type="Script" id=5]
 [ext_resource path="res://alagard.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/background_game.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
@@ -14,6 +15,11 @@ font_data = ExtResource( 6 )
 font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 299, 510.5 )
+scale = Vector2( 0.970703, 1.0127 )
+texture = ExtResource( 7 )
 
 [node name="grid" type="Node2D" parent="."]
 script = ExtResource( 1 )
@@ -38,6 +44,7 @@ margin_top = 1.0
 margin_right = 580.0
 margin_bottom = 21.0
 rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Score: "
 __meta__ = {
@@ -50,6 +57,7 @@ margin_top = 2.0
 margin_right = 273.0
 margin_bottom = 22.0
 rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Time: "
 align = 2
