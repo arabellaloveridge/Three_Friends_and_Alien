@@ -26,19 +26,26 @@ Countdown
 
 Assets, or resources used:
 
+Alagard Font by [Hewett Tsoi](https://www.dafont.com/alagard.font)
+
+Other assets produced by group members
+
 ## References
 
 Alagard Font by Hewett Tsoi https://www.dafont.com/alagard.font
 
 Cobblestone from Adobe Stock (I own it :D)
+
 ## Future Development
+
+Bombs, music sped up, more levels, touch-up graphics, fire, animations
 
 # Created by: Three Friends and an Alien
 
-Arabella Loveridge -
+Arabella Loveridge - Base programming
 
 Kylie Fulton - Drew the Dragon heads for the tiles (art)
 
-Luke Pollin - 
+Luke Pollin - Music and Sound Effects
 
 Daniel Trauberman - Made UI/HUD, Owns the Cobblestone, Made the Name (Time Drags On)
