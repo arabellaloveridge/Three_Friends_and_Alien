@@ -34,4 +34,10 @@ Cobblestone from Adobe Stock (I own it :D)
 ## Future Development
 
 # Created by: Three Friends and an Alien
-List of group members (and contributions)
+Arabella Loveridge -
+
+Kylie Fulton - 
+
+Luke Pollin - 
+
+Daniel Trauberman - Made UI/HUD, Owns the Cobblestone
