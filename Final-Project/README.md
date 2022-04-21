@@ -34,10 +34,11 @@ Cobblestone from Adobe Stock (I own it :D)
 ## Future Development
 
 # Created by: Three Friends and an Alien
+
 Arabella Loveridge -
 
 Kylie Fulton - 
 
 Luke Pollin - 
 
-Daniel Trauberman - Made UI/HUD, Owns the Cobblestone
+Daniel Trauberman - Made UI/HUD, Owns the Cobblestone, Made the Name (Time Drags On)
